@@ -5,6 +5,7 @@ const error =  require("../middleware/error")
 const cors = require("cors")
 
 module.exports = function(app){
+    app.use("/resource",express.static("users"))
     app.use(cors())
     app.use(express.json())
     app.use("/users",user)
