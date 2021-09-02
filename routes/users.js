@@ -50,7 +50,6 @@ route.post('/:userId/resources',auth, asyncMiddleware((req, res) =>{
            
            user.resources.push(req.file)
            user = await user.save()
-
             return res.status(200).send(user.resources)
     })
 
