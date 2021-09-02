@@ -4,8 +4,9 @@ const auth = require("../routes/auth")
 const error =  require("../middleware/error")
 const cors = require("cors")
 
+
 module.exports = function(app){
-    app.use(express.static("users"))
+    app.use(express.static('users'))
     app.use(cors())
     app.use(express.json())
     app.use("/users",user)
