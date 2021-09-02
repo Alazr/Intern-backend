@@ -14,7 +14,7 @@ function auth(req,res,next){
 }
 
 function getUser(token){
-    const decode = jwt.verify(token,process.env.JwtPrivateKey)
+    const decode = jwt.verify(token,process.env.JWT_PRIVATEkEY)
     return decode.name
 }
 
